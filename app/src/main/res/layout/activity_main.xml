@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9195A8"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:background="#9195A8"
+        android:text="@string/amount"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9195A8"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tipinpercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#9195A8"
+        android:text="@string/tip_in"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount" />
+    <!--right-->
+
+    <TextView
+        android:id="@+id/tipinnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#9195A8"
+        android:text="@string/tip"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintTop_toBottomOf="@+id/tipinpercentage" />
+
+    <TextView
+        android:id="@+id/totalamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="30dp"
+        android:background="#9195A8"
+        android:text="@string/total"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipinnumber" />
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="163dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints=""
+        android:background="#9195A8"
+        android:ems="10"
+        android:hint=" Enter Amount"
+        android:inputType="numberDecimal"
+        android:maxLength="11"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/amount"
+        app:layout_constraintStart_toEndOf="@+id/amount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="#9195A8"
+        android:hapticFeedbackEnabled="false"
+        android:max="25"
+        app:layout_constraintStart_toStartOf="@+id/dollar"
+        app:layout_constraintTop_toBottomOf="@+id/dollar"
+        app:tickMarkTint="#FAF6F6" />
+
+    <TextView
+        android:id="@+id/tipvalue"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#9195A8"
+        android:text="Tip amount"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/dollar"
+        app:layout_constraintTop_toBottomOf="@+id/tipinpercentage" />
+
+    <TextView
+        android:id="@+id/totalvalue"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:background="#9195A8"
+        android:text="Total amount"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/dollar"
+        app:layout_constraintTop_toTopOf="@+id/totalamount" />
+
+    <TextView
+        android:id="@+id/Splitamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#9195A8"
+        android:text="@string/split"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintTop_toBottomOf="@+id/totalamount" />
+
+    <TextView
+        android:id="@+id/perhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#9195A8"
+        android:text="@string/per_head"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintTop_toBottomOf="@+id/Splitamount" />
+
+    <TextView
+        android:id="@+id/perheadamount"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#9195A8"
+        android:text="Individual"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/dollar"
+        app:layout_constraintTop_toBottomOf="@+id/Splitamount" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginRight="125dp"
+        android:background="#F8F0F0"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perheadamount" />
+
+    <TextView
+        android:id="@+id/dollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#9195A8"
+        android:text="$"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintStart_toEndOf="@+id/amount"
+        app:layout_constraintTop_toTopOf="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="#9195A8"
+        android:ems="10"
+        android:hint="@string/number_of_people"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/Splitamount"
+        app:layout_constraintStart_toStartOf="@+id/dollar" /> />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
